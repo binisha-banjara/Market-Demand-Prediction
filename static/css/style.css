@@ -1,0 +1,259 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.content-container {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.switch-field {
+    display: flex;
+    margin-bottom: 36px;
+    overflow: hidden;
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-field label {
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 16px;
+    margin-right: -1px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+    cursor: pointer;
+}
+
+.switch-field input:checked+label {
+    background-color: #a5dc86;
+    box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+.form {
+    max-width: 270px;
+    font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
+    font-weight: normal;
+    line-height: 1.625;
+    margin: 8px auto;
+    padding-left: 16px;
+    z-index: 2;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 60px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.link-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 25px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: solid #86a1dc;
+    background: #86a1dc;
+    color: #000;
+    transition: 1s;
+}
+
+.link-btn:hover {
+    border: solid #86a1dc;
+    background: #86a1dc;
+    color: #000;
+    transition: 1s;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    border-radius: 5px;
+    width: 400px;
+    filter: blur(0);
+    transition: filter 0.3s ease-in-out;
+}
+
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    display: none;
+}
+
+.close-popup-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.area,
+.location,
+.submit {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.submit {
+    background: #a5dc86;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.result {
+    background: #dcd686;
+    width: 100%;
+    border: 0;
+    margin: 25px 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+    /* Hide the result initially */
+    position: relative;
+    margin-top: 10px;
+
+}
+
+/* Show the result when it has content */
+.result h2:not(:empty) {
+    display: block;
+}
+
+.result h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+
+.img {
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('https: //unsplash.com/photos/grass-field-IQVFVH0ajag');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body,
+html {
+    height: 100%;
+}

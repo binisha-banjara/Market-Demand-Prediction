@@ -1,0 +1,121 @@
+Commodity_apple(jholey)
+Commodity_arum
+Commodity_asparagus
+Commodity_bakula
+Commodity_bamboo shoot
+Commodity_banana
+Commodity_barela
+Commodity_bauhania flower
+Commodity_bitter gourd
+Commodity_bottle gourd
+Commodity_brd leaf mustard
+Commodity_brinjal long
+Commodity_brinjal round
+Commodity_brocauli
+Commodity_cabbage
+Commodity_cabbage(local)
+Commodity_cabbage(terai)
+Commodity_capsicum
+Commodity_carrot(local)
+Commodity_carrot(terai)
+Commodity_cauli local
+Commodity_cauli local(jyapu)
+Commodity_cauli terai
+Commodity_celery
+Commodity_chilli dry
+Commodity_chilli green
+Commodity_chilli green(akbare)
+Commodity_chilli green(bullet)
+Commodity_chilli green(machhe)
+Commodity_christophine
+Commodity_clive dry
+Commodity_clive green
+Commodity_coriander green
+Commodity_cow pea(long)
+Commodity_cowpea(short)
+Commodity_cress leaf
+Commodity_cucumber(hybrid)
+Commodity_cucumber(local)
+Commodity_drumstick
+Commodity_fennel leaf
+Commodity_fenugreek leaf
+Commodity_fish fresh
+Commodity_fish fresh(bachuwa)
+Commodity_fish fresh(chhadi)
+Commodity_fish fresh(mungari)
+Commodity_fish fresh(rahu)
+Commodity_french bean(hybrid)
+Commodity_french bean(local)
+Commodity_french bean(rajma)
+Commodity_garlic dry chinese
+Commodity_garlic dry nepali
+Commodity_garlic green
+Commodity_ginger
+Commodity_grapes(green)
+Commodity_green peas
+Commodity_guava
+Commodity_gundruk
+Commodity_jack fruit
+Commodity_kinnow
+Commodity_knolkhol
+Commodity_lemon
+Commodity_lettuce
+Commodity_lime
+Commodity_litchi(local)
+Commodity_mandarin
+Commodity_mango(maldah)
+Commodity_mint
+Commodity_mombin
+Commodity_mushroom(button)
+Commodity_mushroom(kanya)
+Commodity_mustard leaf
+Commodity_neuro
+Commodity_okara
+Commodity_onion dry (chinese)
+Commodity_onion dry (indian)
+Commodity_onion green
+Commodity_orange(indian)
+Commodity_orange(nepali)
+Commodity_papaya(indian)
+Commodity_papaya(nepali)
+Commodity_parseley
+Commodity_pear(chinese)
+Commodity_pear(local)
+Commodity_pineapple
+Commodity_pointed gourd(local)
+Commodity_pointed gourd(terai)
+Commodity_pomegranate
+Commodity_potato red
+Commodity_potato red(indian)
+Commodity_potato red(mude)
+Commodity_potato white
+Commodity_pumpkin
+Commodity_raddish red
+Commodity_raddish white(hybrid)
+Commodity_raddish white(local)
+Commodity_red cabbbage
+Commodity_smooth gourd
+Commodity_snake gourd
+Commodity_soyabean green
+Commodity_spinach leaf
+Commodity_sponge gourd
+Commodity_squash(long)
+Commodity_squash(round)
+Commodity_strawberry
+Commodity_sugarbeet
+Commodity_sugarcane
+Commodity_sweet orange
+Commodity_sweet potato
+Commodity_sword bean
+Commodity_tamarind
+Commodity_tofu
+Commodity_tomato big(indian)
+Commodity_tomato big(nepali)
+Commodity_tomato small(indian)
+Commodity_tomato small(local)
+Commodity_tomato small(terai)
+Commodity_tomato small(tunnel)
+Commodity_turnip
+Commodity_turnip a
+Commodity_water melon(green)
+Commodity_yam

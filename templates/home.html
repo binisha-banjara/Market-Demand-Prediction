@@ -1,129 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Demand  Prediction</title>
-    <script src="
-    https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
-    "></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="{{url_for ('static',filename = 'js/script.js')}}"></script>
-    <link rel="stylesheet" href="{{url_for ('static',filename='css/style.css')}}">
-    <style>
-        
-        body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
-        }
-    
-        form {
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
-    
-        label,
-        input,
-        select {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-    
-        .crop-btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-    
-        .crop-btn:hover {
-            background-color: #218838;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="img"></div>
-    <div class="text-box">
-        <h1>Market Demand Prediction</h1>
-        <p>This is a model that predicts price of commodities in Nepal. You can chose a commodity and it predicts its prices based 
-            on its historical prices. It also recommeds you a crop to cultivate on the basis of NPK value
-            of soil along with the weather condition.
-        </p>
-        <button class="open-popup-button link-btn" onclick="openPopup()">Predict</button>
-    </div>
-
-    <div class="popup">
-        <span class="close-popup-button" onclick="closePopup()">&#10005;</span>
-        <div class="container">
-            <h2>Crop Recommender</h2>
-            <form action="/" method="POST">
-        
-                <label for="n">Nitrogen (N):</label>
-                <input type="number" id="n" name="n" step="1" required>
-        
-                <label for="p">Phosphorus (P):</label>
-                <input type="number" id="p" name="p" step="1" required>
-        
-                <label for="k">Potassium (K):</label>
-                <input type="number" id="k" name="k" step="1" required>
-        
-                <label for="humidity">Temperature (C):</label>
-                <input type="number" id="temperature" name="temperature" step="0.01" required>
-        
-                <label for="humidity">Humidity (%):</label>
-                <input type="number" id="humidity" name="humidity" step="0.01" required>
-        
-                <label for="ph">pH Level:</label>
-                <input type="number" id="ph" name="ph" step="0.01" required>
-        
-                <label for="rainfall">Rainfall (mm):</label>
-                <input type="number" id="rainfall" name="rainfall" step="1" required>
-        
-        
-                <button type="submit" class="crop-btn" id="submit_btn">Predict Crop</button>
-            </form>
-        </div>
-        <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
-
-    </div>
-</body>
-<div class="blur-overlay"></div>
-<script>
-    $(document).ready(function () {
-            $('form').on('submit', function (e) {
-                e.preventDefault();  
-                $.ajax({
-                    url: '/',
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        if (response.prediction) {
-                            $('#result').text('Recommended Crop: ' + response.prediction);
-                        } else {
-                            $('#result').text('An error occurred during prediction.');
-                        }
-                    },
-                    error: function () {
-                        $('#result').text('An error occurred during prediction.');
-                    }
-                });
-            });
-        });
-</script>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -137,7 +11,6 @@
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav id="navbar">
         <ul>
             <li><a href="#home">Home</a></li>
@@ -146,7 +19,6 @@
         </ul>
     </nav>
 
-    <!-- Home Section -->
     <section id="home">
         <div class="content">
             <h1>Welcome to Crop Prediction</h1>
@@ -154,19 +26,27 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Us</h2>
-        <p>We help farmers make informed decisions by providing accurate crop price predictions and recommendations
-            based on environmental data.</p>
+        <p>Welcome to our innovative platform dedicated to enhancing agricultural decision-making through advanced technology. Our
+        mission is to empower farmers, agronomists, and stakeholders in the agricultural sector with precise market price
+        predictions and tailored crop recommendations.
+        
+        In a rapidly changing agricultural landscape, understanding market dynamics is essential for optimizing production and
+        maximizing profits. Our sophisticated system leverages state-of-the-art machine learning techniques to accurately
+        predict crop prices based on historical data and a variety of influencing factors, including weather patterns and
+        seasonal trends.
+        
+        We believe that informed decisions lead to better outcomes. That’s why we not only provide price forecasts but also
+        offer personalized crop recommendations based on environmental conditions and market trends. By integrating this
+        information, we aim to help farmers choose the right crops to cultivate, ensuring that their efforts yield the best
+        possible returns.</p>
     </section>
 
-    <!-- Services Section -->
     <section id="services">
         <h2>Our Services</h2>
     
         <div class="services-container">
-            <!-- Crop Price Prediction Card -->
             <div class="service-card">
                 <div class="card-content">
                     <h3>Crop Price Prediction</h3>
@@ -175,80 +55,83 @@
                 </div>
             </div>
     
-            <!-- Crop Recommendation Card -->
             <div class="service-card">
                 <div class="card-content">
                     <h3>Crop Recommendation</h3>
                     <p>Get recommendations for the best crops to grow based on weather and soil data.</p>
-                    <button onclick="showPredictionForm()">Predict Now</button>
+                    <button onclick="showRecommendationForm()">Predict Now</button>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Popup Forms (Initially hidden) -->
     
-    <!-- <div id="prediction-popup" class="popup-form">
+    
+    <div id="price-prediction-popup" class="popup-form">
         <div class="form-content">
             <span class="close-popup-button" onclick="closePopup()">&#10005;</span>
             <div class="container">
-                <h2>Crop Recommender</h2>
-                <form action="/" method="POST">
-        
-                    <label for="n">Nitrogen (N):</label>
-                    <input type="number" id="n" name="n" step="1" required>
-        
-                    <label for="p">Phosphorus (P):</label>
-                    <input type="number" id="p" name="p" step="1" required>
-        
-                    <label for="k">Potassium (K):</label>
-                    <input type="number" id="k" name="k" step="1" required>
-        
-                    <label for="humidity">Temperature (C):</label>
-                    <input type="number" id="temperature" name="temperature" step="0.01" required>
-        
-                    <label for="humidity">Humidity (%):</label>
-                    <input type="number" id="humidity" name="humidity" step="0.01" required>
-        
-                    <label for="ph">pH Level:</label>
-                    <input type="number" id="ph" name="ph" step="0.01" required>
-        
-                    <label for="rainfall">Rainfall (mm):</label>
-                    <input type="number" id="rainfall" name="rainfall" step="1" required>
-        
-        
-                    <button type="submit" class="crop-btn" id="submit_btn">Predict Crop</button>
+                <h2>Price Predictor</h2>
+                <form id="price-form" action="/predict_price" method="POST">
+                    
+                    <div class="form-row">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="commodity">Commodity:</label>
+                        <select id="commodity" name="commodity" required>
+                            <option value="">Select a commodity</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="Temperature">Temperature</label>
+                        <input type="Temperature" class="form-control" name="Temperature" step="any">
+                    </div>
+                    <div class="form-row">
+                        <label for="Rainfall">Rainfall</label>
+                        <input type="number" class="form-control" name="Rainfall" step="any">
+                    </div>
+                    <div class="form-row">
+                        <label for="Humidity">Humidity</label>
+                        <input type="number" class="form-control" name="Humidity" step="any">
+                    </div>
+                    <button type="submit" class="price-btn" id="submit_btn">Predict Price</button>
                 </form>
             </div>
-            <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+            <div id="price-result" style="margin-top: 20px; font-weight: bold;"></div>
         </div>
-    
-    </div> -->
-    
+    </div>
+
     <div id="prediction-popup" class="popup-form">
         <div class="form-content">
             <span class="close-popup-button" onclick="closePopup()">&#10005;</span>
             <div class="container">
                 <h2>Crop Recommender</h2>
                 <form id="crop-form" action="/" method="POST">
-                    <label for="n">Nitrogen (N):</label>
-                    <input type="number" id="n" name="n" step="1" required>
-    
-                    <label for="p">Phosphorus (P):</label>
-                    <input type="number" id="p" name="p" step="1" required>
-    
-                    <label for="k">Potassium (K):</label>
-                    <input type="number" id="k" name="k" step="1" required>
-    
-                    <label for="temperature">Temperature (C):</label>
-                    <input type="number" id="temperature" name="temperature" step="0.01" required>
-    
-                    <label for="humidity">Humidity (%):</label>
-                    <input type="number" id="humidity" name="humidity" step="0.01" required>
-    
-                    <label for="ph">pH Level:</label>
-                    <input type="number" id="ph" name="ph" step="0.01" required>
-    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="n">Nitrogen (N):</label>
+                            <input type="number" id="n" name="n" step="1" required>
+
+                            <label for="p">Phosphorus (P):</label>
+                            <input type="number" id="p" name="p" step="1" required>
+
+                            <label for="k">Potassium (K):</label>
+                            <input type="number" id="k" name="k" step="1" required>
+                        </div>
+                        <div class="form-col">
+                            <label for="temperature">Temperature (C):</label>
+                            <input type="number" id="temperature" name="temperature" step="0.01" required>
+
+                            <label for="humidity">Humidity (%):</label>
+                            <input type="number" id="humidity" name="humidity" step="0.01" required>
+
+                            <label for="ph">pH Level:</label>
+                            <input type="number" id="ph" name="ph" step="0.01" required>
+                        </div>
+                    </div>
+
                     <label for="rainfall">Rainfall (mm):</label>
                     <input type="number" id="rainfall" name="rainfall" step="1" required>
     
@@ -284,5 +167,62 @@
             });
         });
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('price-form');
+            const resultDiv = document.getElementById('result');
+            const commoditySelect = document.getElementById('commodity');
+
+            fetch('/get_commodities')
+                .then(response => response.json())
+                .then(data => {
+                    data.commodities.forEach(commodity => {
+                        const option = document.createElement('option');
+                        option.value = commodity;
+                        option.textContent = commodity;
+                        commoditySelect.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Error loading commodities:', error));
+
+            
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+                const date = formData.get('date');
+                const commodity = formData.get('commodity');
+                const temperature = formData.get('Temperature'); // Add this line
+                const rainfall = formData.get('Rainfall'); // Add this line
+                const humidity = formData.get('Humidity');
+
+                fetch('/predict_price', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        date: date,
+                        commodity: commodity,
+                        Temperature: temperature, // Add this line
+                        Rainfall: rainfall, // Add this line
+                        Humidity: humidity
+                    }),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('price-result').innerHTML = `Predicted price for ${commodity} on ${date}: ${data.predicted_price}`;
+
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        document.getElementById('price-result').innerHTML = 'An error occurred while predicting the price.';
+                    });
+            });
+        });
+
+        
+
 </script>
 </html>
